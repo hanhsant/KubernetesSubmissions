@@ -1,14 +1,11 @@
-const crypto = require('crypto');
 
-const app = ()=> {
- const randomString = crypto.randomUUID();
- setInterval(() => {
-   const timestamp = new Date().toISOString();
+const app = require('./app')
+const config = require('./utils/config')
 
-   console.log(`${timestamp}: ${randomString}`);
-   
- }, 5000);
-}
 
-app();
+ 
+app.listen(config.PORT, () => {
+  console.log(`Server started in port ${config.PORT}`)
+})
+
 module.exports = app;
