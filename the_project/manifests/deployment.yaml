@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: todo-app
-          image: hanhsant/todo-app:latest
+          image: hanhsant/todo-app:v1.1.5
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
