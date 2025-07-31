@@ -24,4 +24,7 @@
 
 - [1.10.](https://github.com/hanhsant/KubernetesSubmissions/tree/1.10/log_output)
 
+-  [1.11.](https://github.com/hanhsant/KubernetesSubmissions/tree/1.10/log_output)
+### 
+Also [cluster_resource](https://github.com/hanhsant/KubernetesSubmissions/tree/1.11/cluster_resources/manifests) and [pingpong](https://github.com/hanhsant/KubernetesSubmissions/tree/1.11/ping-pong)
 
