@@ -12,7 +12,14 @@ spec:
       labels:
         app: pingpong-app
     spec:
+      volumes:
+        - name: shared-pv
+          persistentVolumeClaim:
+            claimName: shared-pvc
       containers:
         - name: pingpong-app
-          image: hanhsant/pingpong-app:v1.1.9
+          image: hanhsant/pingpong-app:v1.1.11
           imagePullPolicy: Always
+          volumeMounts:
+            - name: shared-pv
+              mountPath: /usr/src/app/files

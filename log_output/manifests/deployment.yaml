@@ -13,18 +13,21 @@ spec:
         app: random-string-app
     spec:
       volumes:
-        - name: shared-image
-          emptyDir: {}
+        - name: shared-pv
+          persistentVolumeClaim:
+            claimName: shared-pvc
       containers:
         - name: create-random-string
-          image: hanhsant/create-random-string:v1.1.10
+          image: hanhsant/create-random-string:v1.1.11
+          imagePullPolicy: Always
           volumeMounts:
-            - name: shared-image
+            - name: shared-pv
               mountPath: /usr/src/app/files
         - name: read-random-string
-          image: hanhsant/read-random-string:v1.1.10
+          image: hanhsant/read-random-string:v1.1.11
+          imagePullPolicy: Always
           volumeMounts:
-            - name: shared-image
+            - name: shared-pv
               mountPath: /usr/src/app/files
           
      
