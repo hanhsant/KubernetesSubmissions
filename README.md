@@ -22,4 +22,6 @@
 
 - [1.9.](https://github.com/hanhsant/KubernetesSubmissions/tree/1.9/ping-pong)
 
+- [1.10.](https://github.com/hanhsant/KubernetesSubmissions/tree/1.10/log_output)
+
 
